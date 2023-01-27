@@ -12,6 +12,10 @@ const HomeScreen = ({ navigation }) => {
     navigate("List");
   };
 
+  const handleImageScreenPressed = () => {
+    navigate("Image");
+  };
+
   return (
     <View>
       <Text style={styles.text}>Hi there!</Text>
@@ -19,9 +23,8 @@ const HomeScreen = ({ navigation }) => {
         title="Go to Components Demo"
         onPress={handleComponentDemoPressed}
       />
-      <TouchableOpacity onPress={handleListDemoPressed}>
-        <Text>Go to List Demo</Text>
-      </TouchableOpacity>
+      <Button title="Go to List Demo" onPress={handleListDemoPressed} />
+      <Button title="Go to Image Screen" onPress={handleImageScreenPressed} />
     </View>
   );
 };
