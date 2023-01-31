@@ -16,6 +16,10 @@ const HomeScreen = ({ navigation }) => {
     navigate("Image");
   };
 
+  const handleCounterScreenPressed = () => {
+    navigate("Counter");
+  };
+
   return (
     <View>
       <Text style={styles.text}>Hi there!</Text>
@@ -25,6 +29,10 @@ const HomeScreen = ({ navigation }) => {
       />
       <Button title="Go to List Demo" onPress={handleListDemoPressed} />
       <Button title="Go to Image Screen" onPress={handleImageScreenPressed} />
+      <Button
+        title="Go to Counter Screen"
+        onPress={handleCounterScreenPressed}
+      />
     </View>
   );
 };
