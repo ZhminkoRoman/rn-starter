@@ -20,6 +20,10 @@ const HomeScreen = ({ navigation }) => {
     navigate("Counter");
   };
 
+  const handleColorScreenPressed = () => {
+    navigate("Color");
+  };
+
   return (
     <View>
       <Text style={styles.text}>Hi there!</Text>
@@ -33,6 +37,7 @@ const HomeScreen = ({ navigation }) => {
         title="Go to Counter Screen"
         onPress={handleCounterScreenPressed}
       />
+      <Button title="Go to Color Screen" onPress={handleColorScreenPressed} />
     </View>
   );
 };
