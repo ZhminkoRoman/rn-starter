@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 
 const ColorCounter = ({ color, onChangeValue, colorIncrement }) => {
+  const typeColor = `change_${color.toLowerCase()}`;
+
   const handleIncreaseColorValue = () => {
-    onChangeValue((prev) =>
-      prev - colorIncrement > 255 ? prev : prev + colorIncrement
-    );
+    onChangeValue({ type: typeColor, payload: colorIncrement });
   };
 
   const handleDecreaseColorValue = () => {
-    onChangeValue((prev) =>
-      prev - colorIncrement < 0 ? prev : prev - colorIncrement
-    );
+    onChangeValue({ type: typeColor, payload: -colorIncrement });
   };
 
   return (
