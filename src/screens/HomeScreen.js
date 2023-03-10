@@ -32,6 +32,10 @@ const HomeScreen = ({ navigation }) => {
     navigate("Text");
   };
 
+  const handleBoxScreenPressed = () => {
+    navigate("Box");
+  };
+
   return (
     <View>
       <Text style={styles.text}>Hi there!</Text>
@@ -48,6 +52,7 @@ const HomeScreen = ({ navigation }) => {
       <Button title="Go to Color Screen" onPress={handleColorScreenPressed} />
       <Button title="Go to Square Demo" onPress={handleSquareScreenPressed} />
       <Button title="Go to Text Demo" onPress={handleTextScreenPressed} />
+      <Button title="Go to Box Demo" onPress={handleBoxScreenPressed} />
     </View>
   );
 };
